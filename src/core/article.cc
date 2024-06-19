@@ -1,4 +1,5 @@
 #include <sstream>
+#include <chrono>
 
 #include <core/dream_kind.hh>
 #include <core/article.hh>
@@ -57,4 +58,9 @@ unsigned int Article::get_word_count() const {
         count++;
     }
     return count;
+}
+
+
+void Article::update_modified_time() {
+    modified_time_ = std::chrono::system_clock::now();
 }

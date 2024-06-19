@@ -36,7 +36,6 @@ public:
 
     const std::string get_body() const;
     void set_body(std::string body);
-    void write_to_body(std::string s);
 
     /// @brief Get number of bytes that the character is taking. This function does not
     /// @brief actually count characters, but instead provides a rough estimate of
@@ -47,4 +46,6 @@ public:
     /// @brief Calculate number of words that the article has.
     /// @return Word count.
     unsigned int get_word_count() const;
+
+    void update_modified_time();
 };
