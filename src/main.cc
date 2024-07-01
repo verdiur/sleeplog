@@ -87,8 +87,7 @@ int main()
         ImGui::ShowDemoWindow();
 
         // ...
-        Viewer test{};
-        test.load();
+        Viewer test_viewer{};
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

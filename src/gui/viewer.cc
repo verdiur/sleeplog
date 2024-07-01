@@ -4,9 +4,11 @@
 #include <gui/viewer.hh>
 
 
-Viewer::Viewer(Article* article):
+Viewer::Viewer(Article* article, bool load):
     p_article(article)
-{}
+{
+    if (load) { Viewer::load(); }
+}
 
 
 const Article* Viewer::get_article() const {

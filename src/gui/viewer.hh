@@ -11,7 +11,7 @@ private:
 
 public:
 
-    Viewer(Article* article = nullptr);
+    Viewer(Article* article = nullptr, bool load = true);
 
     const Article* get_article() const;
     Article* get_article();
