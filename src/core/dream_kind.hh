@@ -13,7 +13,7 @@ enum DreamKind {
 
 /// @brief Convert DreamKind enum to std::string
 /// @return Converted string
-std::string dk_to_s(DreamKind dk) {
+inline std::string dk_to_s(DreamKind dk) {
     switch (dk) {
         case none:          return "none";
         case normal:        return "normal";

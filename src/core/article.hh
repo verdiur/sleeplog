@@ -6,24 +6,27 @@
 #include <core/dream_kind.hh>
 
 
+/// @brief Article class
 class Article
 {
 private:
 
     typedef std::chrono::time_point<std::chrono::system_clock> TimePoint;
 
-    std::string body_;
-    std::string title_;
-    DreamKind kind_;
-    TimePoint created_time_;
-    TimePoint modified_time_;
+    std::string m_body;
+    std::string m_title;
+    DreamKind m_kind;
+    date::year_month_day m_date;
+    TimePoint m_created_time;
+    TimePoint m_modified_time;
 
 public:
 
     Article(
-        std::string body_ = "", 
+        std::string body = "", 
         std::string title = "", 
-        DreamKind kind = none, 
+        DreamKind kind = none,
+        date::year_month_day date = date::year_month_day{},
         TimePoint created_time = std::chrono::system_clock::now(),
         TimePoint modified_time = std::chrono::system_clock::now()  
     );
@@ -37,7 +40,7 @@ public:
     const std::string get_body() const;
     void set_body(std::string body);
 
-    /// @brief Get number of bytes that the character is taking. This function does not
+    /// @brief Get number of bytes that the article is taking. This function does not
     /// @brief actually count characters, but instead provides a rough estimate of
     /// @brief the character count.
     /// @return Byte length of the body.

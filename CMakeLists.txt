@@ -12,6 +12,8 @@ add_executable(${PROJECT_NAME}
     src/main.cc
     # core
     src/core/article.cc
+    # gui
+    src/gui/viewer.cc
     # 3rd party
     libs/glad/glad.c
     ${IMGUI_SRC}
