@@ -2,7 +2,6 @@
 #include <core/article.hh>
 
 
-/// @class Viewer
 /// @brief Window that displays an article through a pointer.
 class Viewer
 {
