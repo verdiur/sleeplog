@@ -11,21 +11,6 @@ Viewer::Viewer(Article* article, bool load):
 }
 
 
-const Article* Viewer::get_article() const {
-    return p_article;
-}
-
-
-Article *Viewer::get_article() {
-    return p_article;
-}
-
-
-void Viewer::set_article(Article* article) {
-    p_article = article;
-}
-
-
 // placeholder
 float f[3];
 void Viewer::load() {
