@@ -54,17 +54,17 @@ int main()
     }
     glfwMakeContextCurrent(window);
 
-    // init GLAD
+    // init glad
     if (!gladLoadGL()) {
         std::cerr << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
 
-    // setup GL viewport
+    // setup gl viewport
     glViewport(0, 0, WW, WH);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // setup IMGUI
+    // setup imgui
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
@@ -78,20 +78,26 @@ int main()
     // main loop
     while (!glfwWindowShouldClose(window))
     {
+        // GL
+
         glClear(GL_COLOR_BUFFER_BIT);
         glfwPollEvents();
+
+        // INIT FRAME
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-        ImGui::ShowDemoWindow();
 
-        // ...
+        // UI
+
+        ImGui::ShowDemoWindow();
         Viewer test_viewer{};
+
+        // DRAW
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
         glfwSwapBuffers(window);
     }
 
