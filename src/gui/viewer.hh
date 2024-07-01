@@ -5,17 +5,13 @@
 /// @brief Window that displays an article through a pointer.
 class Viewer
 {
-private:
+public:
     
     Article* p_article;
 
 public:
 
     Viewer(Article* article = nullptr, bool load = true);
-
-    const Article* get_article() const;
-    Article* get_article();
-    void set_article(Article* article);
     
     /// @brief Load window and logic
     void load();
