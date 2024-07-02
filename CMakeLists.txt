@@ -4,7 +4,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED 20)
 
 file(GLOB IMGUI_SRC "libs/imgui/*.cpp")
-
 add_subdirectory(libs/glfw)
 
 add_executable(${PROJECT_NAME}
@@ -21,7 +20,6 @@ add_executable(${PROJECT_NAME}
     libs/imgui/backends/imgui_impl_opengl3.cpp
     libs/imgui/misc/cpp/imgui_stdlib.cpp
 )
-
 target_include_directories(${PROJECT_NAME} PUBLIC
     src/
     libs/
