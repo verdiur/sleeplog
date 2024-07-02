@@ -2,13 +2,13 @@
 Lightweight dream journaling app, currently a work in progress.
 
 ## Targeted features
-**sleeplog** aims at the following features:
+**sleeplog** targets the following features:
+- [ ] Easy Markdown-based writing.
 - [ ] One entry per dream, with dream kind and date.
 - [ ] A calendar for quick navigation at a glance.
 - [ ] Allows you to search through dreams by several criteria.
-- [ ] Theming.
-- [ ] Easy Markdown-based writing.
 - [ ] Multiple journals support.
+- [ ] Theming.
 
 ## Dependencies
 This software uses the following dependencies:
