@@ -75,6 +75,9 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init();
 
+    // create windows
+    Viewer test_viewer{};
+
     // main loop
     while (!glfwWindowShouldClose(window))
     {
@@ -89,10 +92,10 @@ int main()
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        // UI
+        // LOAD
 
         ImGui::ShowDemoWindow();
-        Viewer test_viewer{};
+        test_viewer.show();
 
         // DRAW
 

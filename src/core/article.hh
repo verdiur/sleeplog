@@ -7,7 +7,7 @@
 
 
 /// @brief Article class
-class Article
+class Entry
 {
 private:
 
@@ -28,7 +28,7 @@ private:
 
 public:
 
-    Article(
+    Entry(
         std::string body = "", 
         std::string title = "", 
         DreamKind kind = none,

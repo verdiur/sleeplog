@@ -4,16 +4,14 @@
 #include <gui/viewer.hh>
 
 
-Viewer::Viewer(Article* article, bool load):
-    p_article(article)
-{
-    if (load) { Viewer::load(); }
-}
+Viewer::Viewer(Entry* entry):
+    p_entry(entry)
+{}
 
 
 // placeholder
 float f[3];
-void Viewer::load() {
+void Viewer::show() {
     ImGui::Begin("Viewer (test)");
     ImGui::ColorEdit3("", f);
     ImGui::End();

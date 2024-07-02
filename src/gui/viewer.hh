@@ -7,12 +7,16 @@ class Viewer
 {
 public:
     
-    Article* p_article;
+    Entry* p_entry;
 
 public:
 
-    Viewer(Article* article = nullptr, bool load = true);
+    Viewer(Entry* entry = nullptr);
     
-    /// @brief Load window and logic
-    void load();
+    /// @brief Show window. Also contains UI logic
+    void show();
+
+private:
+
+    // controllers...
 };
