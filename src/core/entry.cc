@@ -3,6 +3,8 @@
 #include <date/date.h>
 
 #include <core/dream_kind.hh>
+
+// IMPLEMENTS ENTRY.HH
 #include <core/entry.hh>
 
 
@@ -22,21 +24,26 @@ Entry::Entry(
     m_modified_time(modified_time)
 {}
 
+
 const Entry::time_point& Entry::get_created_time() const {
     return m_created_time;
 }
+
 
 const Entry::time_point& Entry::get_modified_time() const {
     return m_modified_time;
 }
 
+
 void Entry::update_modified_time() {
     m_modified_time = std::chrono::system_clock::now();
 }
 
+
 unsigned int Entry::calc_char_count() const {
     return m_body.length();
 }
+
 
 unsigned int Entry::calc_word_count() const {
     std::stringstream stream(m_body);

@@ -9,15 +9,13 @@
 class Viewer
 {
 public:
-    
-    std::string m_label;
+
     Entry* p_entry;
     std::shared_ptr<ImGui::MarkdownConfig> p_md_config;
 
 public:
 
     Viewer(
-        std::string label,
         Entry* entry = nullptr,
         std::shared_ptr<ImGui::MarkdownConfig> md_config
             = std::make_shared<ImGui::MarkdownConfig>()

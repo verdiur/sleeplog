@@ -2,11 +2,12 @@
 #include <imgui_markdown/imgui_markdown.h>
 
 #include <core/entry.hh>
+
+// IMPLEMENTS VIEWER.HH
 #include <gui/viewer.hh>
 
 
-Viewer::Viewer(std::string label, Entry* entry, std::shared_ptr<ImGui::MarkdownConfig> md_config):
-    m_label(label),
+Viewer::Viewer(Entry* entry, std::shared_ptr<ImGui::MarkdownConfig> md_config):
     p_entry(entry),
     p_md_config(md_config)
 {}
@@ -14,7 +15,10 @@ Viewer::Viewer(std::string label, Entry* entry, std::shared_ptr<ImGui::MarkdownC
 
 // TODO wip
 void Viewer::show() {
-    ImGui::Begin(m_label.c_str(), nullptr, ImGuiWindowFlags_NoTitleBar);
+    ImGui::Begin("placeholder", nullptr, ImGuiWindowFlags_NoTitleBar);
+
+    // show title
+    ImGui::Text(p_entry->m_title.c_str());
     
     // show markdown
     if (p_entry != nullptr) {

@@ -9,10 +9,16 @@ add_subdirectory(libs/glfw)
 add_executable(${PROJECT_NAME}
     # main
     src/main.cc
+    
     # core
     src/core/entry.cc
+    
     # gui
     src/gui/viewer.cc
+    
+    #utils
+    src/utils/md_utils.cc
+    
     # 3rd party
     libs/glad/glad.c
     ${IMGUI_SRC}
@@ -20,6 +26,7 @@ add_executable(${PROJECT_NAME}
     libs/imgui/backends/imgui_impl_opengl3.cpp
     libs/imgui/misc/cpp/imgui_stdlib.cpp
 )
+
 target_include_directories(${PROJECT_NAME} PUBLIC
     src/
     libs/

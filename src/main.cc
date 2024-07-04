@@ -78,7 +78,7 @@ int main()
 
     // create windows
     Entry test_entry("# test\nthis is a [test](https://github.com/verdiur/sleeplog).", "test title");
-    Viewer test_viewer = Viewer("test", &test_entry);
+    Viewer test_viewer = Viewer(&test_entry);
 
     // main loop
     while (!glfwWindowShouldClose(window))
