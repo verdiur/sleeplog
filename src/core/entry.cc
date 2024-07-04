@@ -3,7 +3,7 @@
 #include <date/date.h>
 
 #include <core/dream_kind.hh>
-#include <core/article.hh>
+#include <core/entry.hh>
 
 
 Entry::Entry(

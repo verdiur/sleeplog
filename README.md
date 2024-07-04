@@ -15,4 +15,4 @@ This software uses the following dependencies:
 - [date](https://github.com/HowardHinnant/date) used for dates and calendar
 - [json](https://github.com/nlohmann/json) used to parse json
 - [glad](https://github.com/Dav1dde/glad), [glfw](https://github.com/glfw/glfw) used for the graphics backend
-- [imgui](https://github.com/ocornut/imgui), [imgui_markdown](https://github.com/enkisoftware/imgui_markdown) used for the interface.
+- [dear imgui](https://github.com/ocornut/imgui), [imgui_markdown](https://github.com/enkisoftware/imgui_markdown) used for the interface.

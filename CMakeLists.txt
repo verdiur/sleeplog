@@ -10,7 +10,7 @@ add_executable(${PROJECT_NAME}
     # main
     src/main.cc
     # core
-    src/core/article.cc
+    src/core/entry.cc
     # gui
     src/gui/viewer.cc
     # 3rd party

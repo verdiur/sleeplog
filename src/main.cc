@@ -28,6 +28,7 @@
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
 
+#include <core/entry.hh>
 #include <gui/viewer.hh>
 
 
@@ -76,7 +77,8 @@ int main()
     ImGui_ImplOpenGL3_Init();
 
     // create windows
-    Viewer test_viewer{};
+    Entry test_entry("# test\nthis is a [test](https://github.com/verdiur/sleeplog).", "test title");
+    Viewer test_viewer = Viewer("test", &test_entry);
 
     // main loop
     while (!glfwWindowShouldClose(window))
