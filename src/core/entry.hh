@@ -6,7 +6,7 @@
 #include <core/dream_kind.hh>
 
 
-/// @brief Article class
+/// @brief Entry class
 class Entry
 {
 private:
