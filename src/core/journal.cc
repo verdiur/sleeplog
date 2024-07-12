@@ -14,13 +14,13 @@ Journal::Journal(std::string title, std::string author):
 {}
 
 
-/// @note Current implementation only deals with exact title matching.
-/// @todo Implement a more lenient search
-Journal::entry_map::iterator Journal::search(const std::string query) {
-    auto it = std::find(
-        m_content.begin(), 
-        m_content.end(), 
-        [&query](Entry& e) { return e.m_title == query; }
-    );
-    return it;
-}
+// /// @note Current implementation only deals with exact title matching.
+// /// @todo Implement a more lenient search
+// Journal::entry_map::iterator Journal::search(const std::string query) {
+//     auto it = std::find(
+//         m_content.begin(), 
+//         m_content.end(), 
+//         [&query](Entry& e) { return e.m_title == query; }
+//     );
+//     return it;
+// }

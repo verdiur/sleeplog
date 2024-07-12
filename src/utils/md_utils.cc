@@ -6,7 +6,7 @@
 #include <utils/md_utils.hh>
 
 
-void MarkdownUtils::link_callback(ImGui::MarkdownLinkCallbackData data) {
+void MarkdownUtils::link_callback(const ImGui::MarkdownLinkCallbackData data) {
     std::string url(data.link, data.linkLength);
     if (!data.isImage) {
         // placeholder
@@ -14,7 +14,7 @@ void MarkdownUtils::link_callback(ImGui::MarkdownLinkCallbackData data) {
 }
 
 
-ImGui::MarkdownImageData MarkdownUtils::img_callback(ImGui::MarkdownLinkCallbackData data) {
+ImGui::MarkdownImageData MarkdownUtils::img_callback(const ImGui::MarkdownLinkCallbackData data) {
     // placeholder
     ImTextureID img = ImGui::GetIO().Fonts->TexID;
     ImGui::MarkdownImageData imageData {

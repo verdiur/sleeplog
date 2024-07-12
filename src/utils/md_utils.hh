@@ -7,12 +7,12 @@ namespace MarkdownUtils
 {
     /// @brief Link callback used for markdown fmt
     /// @param data Callback data
-    void link_callback(ImGui::MarkdownLinkCallbackData data);
+    void link_callback(const ImGui::MarkdownLinkCallbackData data);
 
     /// @brief Image callback used for markdown fmt
     /// @param data Callback data
     /// @return Image data
-    ImGui::MarkdownImageData img_callback(ImGui::MarkdownLinkCallbackData data);
+    ImGui::MarkdownImageData img_callback(const ImGui::MarkdownLinkCallbackData data);
 
     /// @brief Markdown fmt callback
     /// @param md_format_info
