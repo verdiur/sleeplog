@@ -33,5 +33,5 @@ public:
     /// @brief Search for entries using a `std::string` query.
     /// @param query
     /// @return Iterator in the range `[first, last)` satisfying the query.
-    entry_map::iterator search(std::string query);
+    entry_map::iterator search(const std::string query);
 };

@@ -12,6 +12,7 @@ add_executable(${PROJECT_NAME}
     
     # core
     src/core/entry.cc
+    src/core/journal.cc
     
     # gui
     src/gui/viewer.cc
