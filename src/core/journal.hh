@@ -10,7 +10,7 @@
 /// to search through the journal.
 class Journal
 {
-private:
+public:
 
     typedef std::unordered_map<std::string, Entry> entry_map;
 
@@ -21,7 +21,7 @@ public:
 
 private:
 
-    entry_map m_contents;
+    entry_map m_content;
 
 public:
     
@@ -29,4 +29,9 @@ public:
         std::string title = "",
         std::string author = ""
     );
+
+    /// @brief Search for entries using a `std::string` query.
+    /// @param query
+    /// @return Iterator in the range `[first, last)` satisfying the query.
+    entry_map::iterator search(std::string query);
 };
