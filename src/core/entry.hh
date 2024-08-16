@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <chrono>
+#include <filesystem>
 #include <date/date.h>
 
 #include <core/dream_kind.hh>
@@ -36,6 +37,11 @@ public:
         time_point created_time = std::chrono::system_clock::now(),
         time_point modified_time = std::chrono::system_clock::now()
     );
+
+    /// @brief Constructor from a file
+    /// @param path Path to JSON entry file
+    /// @todo
+    Entry(std::filesystem::path path);
 
     /// @brief Get time at which the instance was created.
     /// @return "Created" time point

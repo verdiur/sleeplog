@@ -1,6 +1,8 @@
 #include <sstream>
 #include <chrono>
+#include <filesystem>
 #include <date/date.h>
+#include <json/json.hpp>
 
 #include <core/dream_kind.hh>
 
@@ -23,6 +25,11 @@ Entry::Entry(
     m_created_time(created_time),
     m_modified_time(modified_time)
 {}
+
+
+Entry::Entry(std::filesystem::path path) {
+    
+}
 
 
 const Entry::time_point& Entry::get_created_time() const {

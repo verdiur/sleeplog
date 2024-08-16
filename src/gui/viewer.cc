@@ -9,25 +9,29 @@
 
 Viewer::Viewer(Entry* entry, std::shared_ptr<ImGui::MarkdownConfig> md_config):
     p_entry(entry),
-    p_md_config(md_config)
+    p_md_config(md_config),
+    m_mode(false)
 {}
 
 
-// TODO wip
+// placeholder
 void Viewer::show() {
-    ImGui::Begin("placeholder", nullptr, ImGuiWindowFlags_NoTitleBar);
+    ImGui::Begin("Entry Viewer", nullptr, ImGuiWindowFlags_NoTitleBar);
 
-    // show title
+    // title
     ImGui::Text(p_entry->m_title.c_str());
     
-    // show markdown
+    // body
     if (p_entry != nullptr) {
-        ImGui::Markdown(
-            p_entry->m_body.c_str(), 
-            p_entry->m_body.length(),
-            *p_md_config
-        );
+        if (m_mode) { ImGui::Text("Edit mode (lol)"); }
+        else {
+            ImGui::Markdown(
+                p_entry->m_body.c_str(), 
+                p_entry->m_body.length(),
+                *p_md_config
+            );
+        }
     }
-    
     ImGui::End();
+
 }

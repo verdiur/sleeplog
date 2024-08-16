@@ -70,7 +70,6 @@ int main()
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
@@ -78,7 +77,7 @@ int main()
 
     // create windows
     Entry test_entry("# test\nthis is a [test](https://github.com/verdiur/sleeplog).", "test title");
-    Viewer test_viewer = Viewer(&test_entry);
+    Viewer viewer = Viewer(&test_entry);
 
     // main loop
     while (!glfwWindowShouldClose(window))
@@ -96,8 +95,12 @@ int main()
 
         // LOAD
 
+        // create dockspace
+        ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
+
+        ImGui::ShowIDStackToolWindow();
         ImGui::ShowDemoWindow();
-        test_viewer.show();
+        viewer.show();
 
         // DRAW
 

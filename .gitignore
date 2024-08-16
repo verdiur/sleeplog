@@ -15,4 +15,5 @@ _deps
 
 .vscode
 bin
+test
 run.sh

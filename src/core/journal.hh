@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <unordered_map>
+#include <filesystem>
 
 #include <core/entry.hh>
 
@@ -29,6 +30,10 @@ public:
         std::string title = "",
         std::string author = ""
     );
+
+    /// @brief Constructor from a file
+    /// @param path Path to JSON journal descriptor file.
+    Journal(std::filesystem::path path);
 
     /// @brief Search for entries using a `std::string` query.
     /// @param query
