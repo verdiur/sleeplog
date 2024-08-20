@@ -1,10 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
-project(sleeplog)
+project(
+    sleeplog
+)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED 20)
 
 file(GLOB IMGUI_SRC "libs/imgui/*.cpp")
 add_subdirectory(libs/glfw)
+add_subdirectory(libs/googletest)
+
+### TESTING
+
+include(CTest)
+add_subdirectory(tests)
+
+### MAIN
 
 add_executable(${PROJECT_NAME}
     # main
