@@ -29,7 +29,7 @@
 #include <backends/imgui_impl_opengl3.h>
 
 #include <core/entry.hh>
-#include <gui/viewer.hh>
+#include <gui/viewer_window.hh>
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -77,7 +77,7 @@ int main()
 
     // create windows
     Entry test_entry("# test\nthis is a [test](https://github.com/verdiur/sleeplog).", "test title");
-    Viewer viewer = Viewer(&test_entry);
+    ViewerWindow viewer = ViewerWindow(&test_entry);
 
     // main loop
     while (!glfwWindowShouldClose(window))

@@ -35,8 +35,11 @@ public:
     /// @param path Path to JSON journal descriptor file.
     Journal(std::filesystem::path path);
 
+    /// @brief Const getter for journal content
+    const entry_map& get_content() const;
+
     /// @brief Search for entries using a `std::string` query.
     /// @param query
     /// @return Iterator in the range `[first, last)` satisfying the query.
-    entry_map::iterator search(const std::string query);
+    entry_map::iterator search(const std::string query = "");
 };

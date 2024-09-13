@@ -6,8 +6,8 @@
 #include <gui/window.hh>
 
 
-/// @brief Widget that displays an entry through a pointer.
-class Viewer: Window
+/// @brief Window that displays an entry through a pointer.
+class ViewerWindow: Window
 {
 public:
 
@@ -17,7 +17,7 @@ public:
 
 public:
 
-    Viewer(
+    ViewerWindow(
         Entry* entry = nullptr,
         std::shared_ptr<ImGui::MarkdownConfig> md_config
             = std::make_shared<ImGui::MarkdownConfig>()

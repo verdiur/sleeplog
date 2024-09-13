@@ -25,7 +25,8 @@ add_executable(${PROJECT_NAME}
     src/core/journal.cc
     
     # gui
-    src/gui/viewer.cc
+    src/gui/viewer_window.cc
+    src/gui/menu_window.cc
     
     #utils
     src/utils/md_utils.cc
