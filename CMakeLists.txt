@@ -17,19 +17,19 @@ add_subdirectory(tests)
 ### MAIN
 
 add_executable(${PROJECT_NAME}
-    # main
-    src/main.cc
+    # # main
+    # src/main.cc
     
-    # core
-    src/core/entry.cc
-    src/core/journal.cc
+    # # core
+    # src/core/entry.cc
+    # src/core/journal.cc
     
-    # gui
-    src/gui/viewer_window.cc
-    src/gui/menu_window.cc
+    # # gui
+    # src/gui/viewer_window.cc
+    # src/gui/menu_window.cc
     
     #utils
-    src/utils/md_utils.cc
+    src/utils/piece_table.cc
     
     # 3rd party
     libs/glad/glad.c

@@ -17,3 +17,6 @@ _deps
 bin
 hate
 run.sh
+Session.vim
+docs/
+src_old/
