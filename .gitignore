@@ -14,8 +14,7 @@ CTestTestfile.cmake
 _deps
 
 .vscode
-bin
-hate
+bin/
 run.sh
 Session.vim
 docs/
